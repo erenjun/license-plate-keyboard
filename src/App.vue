@@ -14,13 +14,13 @@
 </template>
 
 <script>
-// import LicensePlateKeyboard from './components/LicensePlateKeyboard.vue'
+import LicensePlateKeyboard from './plugin/LicensePlateKeyboard.vue'
 
 export default {
   name: 'App',
-  // components: {
-  //   LicensePlateKeyboard
-  // },
+  components: {
+    LicensePlateKeyboard
+  },
   data(){
     return {
       keyboardShow:false,

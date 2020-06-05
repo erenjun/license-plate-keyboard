@@ -1,0 +1,18 @@
+{
+  "name": "license-plate-keyboard",
+  "version": "1.0.0",
+  "description": "vue Mobile terminal China license plate keyboard input plug-in",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "China",
+    "mobile",
+    "\"name\":",
+    "\"license-plate-keyboard\""
+  ],
+  "author": "erenjun",
+  "license": "ISC"
+}

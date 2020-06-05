@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import LicensePlateKeyboard from './plugin'
+// import LicensePlateKeyboard from 'license-plate-keyboard'
 
 Vue.config.productionTip = false
-Vue.use(LicensePlateKeyboard);
+    // Vue.use(LicensePlateKeyboard);
 
 new Vue({
     render: h => h(App),

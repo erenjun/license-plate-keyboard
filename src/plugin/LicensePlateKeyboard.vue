@@ -58,9 +58,9 @@ export default {
             type:Object,
             default(){
                 return {
-                    plateType:1,
-                    plateArray:[],// 车牌号
-                    plateLen:7
+                    plateType:1,// 车牌类型 1-普通车牌 2-新能源车牌
+                    plateArray:[],// 车牌号 数组
+                    plateLen:7// 车牌长度
                 };
             }
         }
@@ -170,117 +170,114 @@ export default {
     }
 }
 </script>
-<style lang="scss">
-    @import '../style/param.scss';
-    
-    
+<style scoped>
     .keyboard-cell{
-        background:$colorfff;
-        border-top: 1px solid $borderColor;
+        background:#fff;
+        border-top: 1px solid #CECECE;
         position: fixed;
         z-index: 1024;
         animation:keyPopup .5s;
         bottom: 0;
         right: 0;
         left: 0;
-        .btn-del{
-            width: 51px;
-            height: 43px;
-            background-image: url(../assets/icon/icon_delete.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-position: center;
-            position: absolute;
-            bottom: 6px;
-            right: 2px;
-            &:active{
-                opacity: 0.6;
-            }
-        }
-        .letter-cell{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url(../assets/bg/bg_keyboard.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-position: center;
-            position: absolute;
-            padding: 6px 6px 14px;
-            right:0;
-            top:88px;
-            .letter{
-                    background:$colorfff;
-                    width:32px;
-                    height: 42px;
-                    font-size:18px;
-                    font-family:PingFangSC-Regular,PingFang SC;
-                    font-weight:400;
-                    color:$color333;
-                    line-height:42px;
-                    text-align: center;
-                    box-shadow:0px 1px 0px 0px rgba(134,137,142,1);
-                    border-radius:5px;
-                    margin-right: 6px;
-                    &:last-child{
-                        margin: 0;
-                    }
-                    &:active{
-                        background: $borderColor;
-                    }
-            }
-        }
-        .title-cell{
-            padding: 8px 17px;
-            text-align: right;
-            .btn-close{
-                color:$mainColor;
-                font-size: 14px;
-            }
-        }
-        .key-cell{
-            background: #CFD4DB;
-            padding: 6px 0;
-            .key-row{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 11px;
-                &:last-child{
-                    margin: 0;
-                }
-                .key-item{
-                    background:$colorfff;
-                    width:32px;
-                    height: 42px;
-                    font-size:18px;
-                    font-family:PingFangSC-Regular,PingFang SC;
-                    font-weight:400;
-                    color:$color333;
-                    line-height:42px;
-                    text-align: center;
-                    box-shadow:0px 1px 0px 0px rgba(134,137,142,1);
-                    border-radius:5px;
-                    margin-right: 6px;
-                    &:last-child{
-                        margin: 0;
-                    }
-                    &:active{
-                        background: $borderColor;
-                    }
-                }
-                .big-item{
-                    width: 48px;
-                }
-                .disabled{
-                    color:$color999;
-                    &:active{
-                        background: $colorfff;
-                    }
-                }
-            }
-        }
     }
+	.btn-del{
+    width: 51px;
+    height: 43px;
+    background-image: url(./assets/icon/icon_delete.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+    bottom: 6px;
+    right: 2px;
+	}
+	.btn-del:active{
+	opacity: 0.6;
+	}
+	.letter-cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/bg/bg_keyboard.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+    padding: 6px 6px 14px;
+    right:0;
+    top:88px;
+	}
+	.letter{
+        background:#fff;
+        width:32px;
+        height: 42px;
+        font-size:18px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:#333;
+        line-height:42px;
+        text-align: center;
+        box-shadow:0px 1px 0px 0px rgba(134,137,142,1);
+        border-radius:5px;
+        margin-right: 6px;
+	}
+	.letter:last-child{
+	margin: 0;
+	}
+	.letter:active{
+	background: #CECECE;
+	}
+	.title-cell{
+    padding: 8px 17px;
+    text-align: right;
+	}
+	.btn-close{
+    color:#3296FA;
+    font-size: 14px;
+	}
+	.key-cell{
+    background: #CFD4DB;
+    padding: 6px 0;
+	}
+	.key-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 11px;
+	}
+	.key-row:last-child{
+	margin: 0;
+	}
+	.key-item{
+    background:#fff;
+    width:32px;
+    height: 42px;
+    font-size:18px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:#333;
+    line-height:42px;
+    text-align: center;
+    box-shadow:0px 1px 0px 0px rgba(134,137,142,1);
+    border-radius:5px;
+    margin-right: 6px;
+	}
+	.key-item:last-child{
+	margin: 0;
+	}
+	.key-item:active{
+	background: #CECECE;
+	}
+	.big-item{
+	width: 48px;
+	}
+	.disabled{
+	color:#999;
+	}
+	.disabled:active{
+	background: #fff;
+	}
     @keyframes keyPopup{
         from {bottom:-600px;}
         to {left:0px;}
