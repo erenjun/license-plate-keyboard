@@ -29,5 +29,5 @@ plateInput：function 键盘输入返回
 ```
 ###效果展示
 ```
-![效果图片](https://raw.githubusercontent.com/erenjun/license-plate-keyboard/master/src/assets/1591319859.jpg)
+![Image](https://raw.githubusercontent.com/erenjun/license-plate-keyboard/master/src/assets/1591319859.jpg)
 ```
