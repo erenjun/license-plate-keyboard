@@ -27,3 +27,7 @@ plateInfo: Object 车牌信息 默认值 {
                                  }
 plateInput：function 键盘输入返回 
 ```
+###效果展示
+```
+![效果图片](./src/assets/1591319859.jpg)
+```
